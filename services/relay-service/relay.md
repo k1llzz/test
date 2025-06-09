@@ -55,7 +55,7 @@ See [`relay_context_diagram`](images/diagrams/relay_service_context.png) for a h
 
 ## OpenAPI Specification
 
-* [View Relay Swagger UI](https://relay-service.dev.pntheon.ai/docs#/)
+* [View Relay Swagger UI](https://relay-service.dev.prxs.ai/docs#/)
 
 ---
 
