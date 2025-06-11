@@ -56,7 +56,7 @@ The praxis-agent-template includes automated CI/CD that handles packaging for yo
 {% hint style="info" %}
 When you push a version tag, GitHub Actions automatically:
 
-1. **Python Package:** Builds and publishes to the Praxisantheon Python registry
+1. **Python Package:** Builds and publishes to the Praxis Python registry
 2. **Docker Image:** Builds and publishes to the Praxis OCI registry (if Dockerfile exists)
    {% endhint %}
 
