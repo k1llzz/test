@@ -40,6 +40,15 @@ Each repository serves a specific purpose in the Praxis ecosystem. Choose the on
 - Integration examples
 - Best practices demonstrations
   {% endtab %}
+
+{% tab title="🔧 Tool Template" %}
+**[pantheon-tool-template](https://github.com/eon-fun/pantheon-tool-template)**
+
+- Boilerplate code for new tools
+- Ray integration and CI setup
+- Template structure and examples
+- Distributed execution patterns
+  {% endtab %}
   {% endtabs %}
 
 ---
