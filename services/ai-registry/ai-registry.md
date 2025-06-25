@@ -1,13 +1,13 @@
 # AI Registry
 
-Pantheon Internal Service Reference
+Praxis Internal Service Reference
 *Last updated: 2025-06-09*
 
 ---
 
 ## Overview
 
-The **AI Registry** is a core internal service of Pantheon that acts as the central registry and discovery mechanism for AI Agents and Tools. It enables consistent, versioned, and structured definitions for agent capabilities and supported operations via OpenAI-compatible Function Specifications. The registry is critical to enabling dynamic, multi-agent orchestration within the Pantheon ecosystem.
+The **AI Registry** is a core internal service of Praxis that acts as the central registry and discovery mechanism for AI Agents and Tools. It enables consistent, versioned, and structured definitions for agent capabilities and supported operations via OpenAI-compatible Function Specifications. The registry is critical to enabling dynamic, multi-agent orchestration within the Praxis ecosystem.
 
 ### Key Features
 
@@ -20,7 +20,7 @@ The **AI Registry** is a core internal service of Pantheon that acts as the cent
 * **/find Endpoints**: Returns the most relevant agent/tool using vector similarity.
 * **Background Sync with PyPI**: Celery-based service syncs the latest agent/tool specs from PyPI into the registry.
 
-### Role Within Pantheon
+### Role Within Praxis
 
 AI Registry powers agent coordination by exposing standardized interfaces for function execution, providing the metadata needed for runtime decisions, and acting as the canonical source of truth for agent and tool capabilities. It is deeply integrated into the **Base Agent**, enabling native discovery and invocation of relevant tools.
 
@@ -30,12 +30,12 @@ AI Registry powers agent coordination by exposing standardized interfaces for fu
 
 The AI Registry is a REST-based service that receives POST requests from services wishing to register, update, or look up agent or tool definitions. Each agent/tool is represented by a structured schema (OpenAI-compatible), and identified by a name and version. Clients use the registry at runtime to dynamically select the appropriate agent or tool to invoke.
 
-A background **Celery worker** regularly fetches new or updated agent/tool packages from the **Pantheon PyPI Registry**, extracts their function specifications, and updates the internal database accordingly. In addition, embeddings for each spec are computed and stored in **Qdrant**, enabling powerful semantic search via the `/find` endpoints.
+A background **Celery worker** regularly fetches new or updated agent/tool packages from the **Praxis PyPI Registry**, extracts their function specifications, and updates the internal database accordingly. In addition, embeddings for each spec are computed and stored in **Qdrant**, enabling powerful semantic search via the `/find` endpoints.
 
 ### Basic Flow
 
 1. Developer creates or updates an agent/tool in the respective repository and merges to `main`.
-2. A CI pipeline builds the package and publishes it to the Pantheon PyPI Registry.
+2. A CI pipeline builds the package and publishes it to the Praxis PyPI Registry.
 3. A Celery-based background service periodically fetches new or updated packages.
 4. The AI Registry registers the tool/agent with a POST request.
 5. Embeddings are generated and stored in Qdrant for semantic search.
@@ -45,7 +45,7 @@ A background **Celery worker** regularly fetches new or updated agent/tool packa
 sequenceDiagram
     participant Dev as Developer
     participant CI as CI Pipeline
-    participant PyPI as Pantheon PyPI Registry
+    participant PyPI as Praxis PyPI Registry
     participant Celery as Celery Sync Worker
     participant Registry as AI Registry
     participant Qdrant as Vector DB
@@ -78,11 +78,11 @@ sequenceDiagram
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
 
 Person(dev, "Developer")
-System_Boundary(pantheon, "Pantheon") {
+System_Boundary(praxis, "Praxis") {
     System(ai_registry, "AI Registry", "Central registry for AI agents and tools")
     System_Ext(agent_runtime, "Agent Runtime")
     System_Ext(orchestrator, "Service Orchestrator")
-    System_Ext(pypi, "Pantheon PyPI Registry")
+    System_Ext(pypi, "Praxis PyPI Registry")
     System_Ext(qdrant, "Qdrant Vector DB")
 }
 
@@ -100,7 +100,7 @@ Rel(ai_registry, qdrant, "Performs vector search")
 
 ## OpenAPI Specification
 
-- [View AI Registry Swagger UI](https://ai-registry.dev.pntheon.ai/docs#/)
+- [View AI Registry Swagger UI](https://ai-registry.dev.prxs.ai/docs#/)
 
 ---
 
