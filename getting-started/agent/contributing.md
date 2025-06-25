@@ -42,7 +42,7 @@ Each repository serves a specific purpose in the Praxis ecosystem. Choose the on
   {% endtab %}
 
 {% tab title="🔧 Tool Template" %}
-**[pantheon-tool-template](https://github.com/eon-fun/pantheon-tool-template)**
+**[praxis-tool-template](https://github.com/prxs-ai/praxis-tool-template)**
 
 - Boilerplate code for new tools
 - Ray integration and CI setup

@@ -143,7 +143,7 @@ docker run your-agent-image
 ## 🛠️ Tools vs Agents - What's the difference?
 
 {% hint style="info" %}
-**Understanding the distinction between Pantheon Tools and Agents helps you choose the right approach for your project.**
+**Understanding the distinction between Praxis Tools and Agents helps you choose the right approach for your project.**
 {% endhint %}
 
 ### 🤖 **Agents** (what this FAQ covers)
