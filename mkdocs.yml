@@ -9,16 +9,24 @@ theme:
     - navigation.sections
 docs_dir: docs
 nav:
-  - Welcome: README.md
-  - Summary: SUMMARY.md
+  - Home: index.md
   - Getting Started:
-    - 'getting-started/index.md':
-    - Agent: getting-started/agent/index.md
-    - Provider: getting-started/provider/index.md
-    - Tool: getting-started/tool/index.md
+      - Overview: getting-started/index.md
+      - Agent: getting-started/agent/index.md
+      - Provider: getting-started/provider/index.md
+      - Tool: getting-started/tool/index.md
   - Core concepts:
-    - 'core-concepts/index.md':
+      - Overview: core-concepts/index.md
       - Diagrams: core-concepts/images/diagrams/index.md
-  - Agents: agents/index.md
-  - Services: services/index.md
-  - Tools: tools/index.md
+  - Agents:
+      - Architecture: agents/architecture.md
+      - Communication: agents/communication.md
+      - Config: agents/config.md
+  - Tools:
+      - Architecture: tools/architecture.md
+      - Config: tools/config.md
+  - Services:
+      - Redis: services/redis.md
+      - S3: services/s3.md
+      - PostgreSQL: services/postgresql.md
+      - LightRAG: services/lightrag.md
