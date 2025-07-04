@@ -22,3 +22,6 @@ nav:
   - Agents: agents/index.md
   - Services: services/index.md
   - Tools: tools/index.md
+python:
+  install:
+    - requirements: requirements.txt
