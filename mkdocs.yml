@@ -111,8 +111,6 @@ nav:
 # Плагины для дополнительной функциональности
 plugins:
   - search
-  - minify:
-      minify_html: true
 
 # Markdown расширения
 markdown_extensions:
