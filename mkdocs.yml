@@ -7,27 +7,93 @@ theme:
   features:
     - navigation.tabs
     - navigation.sections
+    - navigation.expand
+    - toc.integrate
 docs_dir: docs
 nav:
-  - Home: index.md
+  - Home: README.md
   - Getting Started:
       - Overview: getting-started/index.md
-      - Agent: getting-started/agent/index.md
-      - Provider: getting-started/provider/index.md
-      - Tool: getting-started/tool/index.md
+      - Quickstart: getting-started/quickstart.md
+      - FAQ: getting-started/faq.md
+      - Contributing: getting-started/contributing.md
+      - Agent:
+          - Overview: getting-started/agent/index.md
+          - Quickstart: getting-started/agent/quickstart.md
+      - Provider:
+          - Overview: getting-started/provider/index.md
+          - Quickstart: getting-started/provider/quickstart.md
+          - README: getting-started/provider/README.md
+      - Tool:
+          - Overview: getting-started/tool/index.md
+          - Quickstart: getting-started/tool/quickstart.md
   - Core Concepts:
       - Overview: core-concepts/index.md
-      - Diagrams: core-concepts/images/diagrams/index.md
+      - Agents: core-concepts/agents.md
+      - dA2A: core-concepts/dA2A.md
+      - Knowledge: core-concepts/knowledge.md
+      - Orchestration: core-concepts/orchestration.md
+      - Overview Concepts: core-concepts/overview.md
+      - Plugins: core-concepts/plugins.md
+      - Providers: core-concepts/providers.md
+      - Tools: core-concepts/tools.md
+      - Workflows: core-concepts/workflows.md
   - Agents:
-      - Architecture: agents/architecture.md
-      - Communication: agents/communication.md
-      - Config: agents/config.md
+      - Overview: agents/index.md
+      - Base Agent: agents/base_agent.md
+      - Example Agent: agents/example-agent.md
+      - AI Agents:
+          - AI APY Pool Agent: agents/ai_apy_pool_agent.md
+          - AI Avatar: agents/ai_avatar.md
+          - AI Dialogue Manager: agents/ai_dialogue_manager.md
+          - AI Predicts Manager: agents/ai_predicts_manager.md
+          - AI SMM Manager: agents/ai_smm_manager.md
+          - AI Twitter Summary: agents/ai_twitter_summary.md
+      - Specialized Agents:
+          - APY Agent: agents/apy_agent.md
+          - Creativity Agent: agents/creativity_agent.md
+          - Dialogue Manager: agents/dialogue_manager.md
+          - KOL Agent: agents/kol_agent.md
+          - Persona Agent: agents/persona_agent.md
+      - Trading & Finance:
+          - Solana New Pairs Agent: agents/solana_new_pairs_agent.md
+          - Wallet Tracker Agent: agents/wallet_tracker_agent.md
+      - Social Media:
+          - Twitter Ambassador Commentator: agents/twitter_ambassador_commentator.md
+          - Twitter Ambassador Comments Answerer: agents/twitter_ambassador_comments_answerer.md
+          - Twitter Ambassador Gorilla Marketing: agents/twitter_ambassador_gorilla_marketing.md
+          - Twitter Ambassador Mention Answerer: agents/twitter_ambassador_mention_answerer.md
+          - Twitter Ambassador Posting Agent: agents/twitter_ambassador_posting_agent.md
+          - Twitter Echo Bot: agents/twitter_echo_bot.md
+          - Twitter Liker Agent: agents/twitter_liker_agent.md
+          - Twitter Summary Agent: agents/twitter_summary_agent.md
+          - Follow/Unfollow Bot: agents/follow_unfollow_bot.md
+          - TikTok Agent: agents/tik_tok_agent.md
+      - Communication:
+          - Telegram Listener Agent: agents/telegram_listener_agent.md
   - Tools:
-      - Architecture: tools/architecture.md
-      - Config: tools/config.md
+      - Overview: tools/index.md
+      - Bots:
+          - Airdrop Bot: tools/airdrop_bot.md
+          - Arbitrage Bot: tools/arbitrage_bot.md
+      - Core Tools:
+          - Handoff Tool: tools/handoff_tool.md
+          - OpenAI Request: tools/openai_request.md
+          - Return Answer Tool: tools/return_answer_tool.md
+      - Provider Tools:
+          - Provider Contract Tool: tools/provider_contract_tool.md
+          - Provider Query Tool: tools/provider_query_tool.md
+          - Provider Subscribe Tool Async: tools/provider_subscribe_tool_async.md
+      - Knowledge Management:
+          - Query Knowledge Tool: tools/query_knowledge_tool.md
+          - Save Knowledge Tool: tools/save-knowledge-tool.md
+      - Infrastructure:
+          - Redis Client: tools/redis_client.md
   - Services:
-      - Redis: services/redis.md
-      - S3: services/s3.md
-      - PostgreSQL: services/postgresql.md
-      - LightRAG: services/lightrag.md
-
+      - Overview: services/index.md
+      - AI Registry:
+          - Overview: services/ai-registry/overview.md
+          - AI Registry: services/ai-registry/ai-registry.md
+      - Relay Service:
+          - Overview: services/relay-service/overview.md
+          - Relay: services/relay-service/relay.md
