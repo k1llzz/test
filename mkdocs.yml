@@ -1,28 +1,35 @@
 site_name: Test Project Documentation
 repo_url: https://github.com/k1llzz/test.git
+
 theme:
   name: material
   palette:
-    scheme: default
+    - scheme: default
+      primary: blue
+      accent: blue
   features:
     - navigation.tabs
     - navigation.sections
-    - navigation.expand
+    - navigation.top
     - toc.integrate
-  icon:
-    repo: fontawesome/brands/github
-docs_dir: docs
 
-# Настройки для строгой проверки
+docs_dir: docs
 strict: false
-validation:
-  omitted_files: warn
-  absolute_links: warn
-  unrecognized_links: warn
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - attr_list
+  - toc:
+      permalink: true
 
 nav:
   - Home: README.md
-  - Summary: SUMMARY.md
   - Getting Started:
       - Overview: getting-started/index.md
       - Quickstart: getting-started/quickstart.md
@@ -43,7 +50,6 @@ nav:
       - dA2A: core-concepts/dA2A.md
       - Knowledge: core-concepts/knowledge.md
       - Orchestration: core-concepts/orchestration.md
-      - Overview Concepts: core-concepts/overview.md
       - Plugins: core-concepts/plugins.md
       - Providers: core-concepts/providers.md
       - Tools: core-concepts/tools.md
@@ -52,53 +58,43 @@ nav:
       - Overview: agents/index.md
       - Base Agent: agents/base_agent.md
       - Example Agent: agents/example-agent.md
-      - AI Agents:
-          - AI APY Pool Agent: agents/ai_apy_pool_agent.md
-          - AI Avatar: agents/ai_avatar.md
-          - AI Dialogue Manager: agents/ai_dialogue_manager.md
-          - AI Predicts Manager: agents/ai_predicts_manager.md
-          - AI SMM Manager: agents/ai_smm_manager.md
-          - AI Twitter Summary: agents/ai_twitter_summary.md
-      - Specialized Agents:
-          - APY Agent: agents/apy_agent.md
-          - Creativity Agent: agents/creativity_agent.md
-          - Dialogue Manager: agents/dialogue_manager.md
-          - KOL Agent: agents/kol_agent.md
-          - Persona Agent: agents/persona_agent.md
-      - Trading & Finance:
-          - Solana New Pairs Agent: agents/solana_new_pairs_agent.md
-          - Wallet Tracker Agent: agents/wallet_tracker_agent.md
-      - Social Media:
-          - Twitter Ambassador Commentator: agents/twitter_ambassador_commentator.md
-          - Twitter Ambassador Comments Answerer: agents/twitter_ambassador_comments_answerer.md
-          - Twitter Ambassador Gorilla Marketing: agents/twitter_ambassador_gorilla_marketing.md
-          - Twitter Ambassador Mention Answerer: agents/twitter_ambassador_mention_answerer.md
-          - Twitter Ambassador Posting Agent: agents/twitter_ambassador_posting_agent.md
-          - Twitter Echo Bot: agents/twitter_echo_bot.md
-          - Twitter Liker Agent: agents/twitter_liker_agent.md
-          - Twitter Summary Agent: agents/twitter_summary_agent.md
-          - Follow/Unfollow Bot: agents/follow_unfollow_bot.md
-          - TikTok Agent: agents/tik_tok_agent.md
-      - Communication:
-          - Telegram Listener Agent: agents/telegram_listener_agent.md
+      - AI APY Pool Agent: agents/ai_apy_pool_agent.md
+      - AI Avatar: agents/ai_avatar.md
+      - AI Dialogue Manager: agents/ai_dialogue_manager.md
+      - AI Predicts Manager: agents/ai_predicts_manager.md
+      - AI SMM Manager: agents/ai_smm_manager.md
+      - AI Twitter Summary: agents/ai_twitter_summary.md
+      - APY Agent: agents/apy_agent.md
+      - Creativity Agent: agents/creativity_agent.md
+      - Dialogue Manager: agents/dialogue_manager.md
+      - Follow/Unfollow Bot: agents/follow_unfollow_bot.md
+      - KOL Agent: agents/kol_agent.md
+      - Persona Agent: agents/persona_agent.md
+      - Solana New Pairs Agent: agents/solana_new_pairs_agent.md
+      - Telegram Listener Agent: agents/telegram_listener_agent.md
+      - TikTok Agent: agents/tik_tok_agent.md
+      - Twitter Ambassador Commentator: agents/twitter_ambassador_commentator.md
+      - Twitter Ambassador Comments Answerer: agents/twitter_ambassador_comments_answerer.md
+      - Twitter Ambassador Gorilla Marketing: agents/twitter_ambassador_gorilla_marketing.md
+      - Twitter Ambassador Mention Answerer: agents/twitter_ambassador_mention_answerer.md
+      - Twitter Ambassador Posting Agent: agents/twitter_ambassador_posting_agent.md
+      - Twitter Echo Bot: agents/twitter_echo_bot.md
+      - Twitter Liker Agent: agents/twitter_liker_agent.md
+      - Twitter Summary Agent: agents/twitter_summary_agent.md
+      - Wallet Tracker Agent: agents/wallet_tracker_agent.md
   - Tools:
       - Overview: tools/index.md
-      - Bots:
-          - Airdrop Bot: tools/airdrop_bot.md
-          - Arbitrage Bot: tools/arbitrage_bot.md
-      - Core Tools:
-          - Handoff Tool: tools/handoff_tool.md
-          - OpenAI Request: tools/openai_request.md
-          - Return Answer Tool: tools/return_answer_tool.md
-      - Provider Tools:
-          - Provider Contract Tool: tools/provider_contract_tool.md
-          - Provider Query Tool: tools/provider_query_tool.md
-          - Provider Subscribe Tool Async: tools/provider_subscribe_tool_async.md
-      - Knowledge Management:
-          - Query Knowledge Tool: tools/query_knowledge_tool.md
-          - Save Knowledge Tool: tools/save-knowledge-tool.md
-      - Infrastructure:
-          - Redis Client: tools/redis_client.md
+      - Airdrop Bot: tools/airdrop_bot.md
+      - Arbitrage Bot: tools/arbitrage_bot.md
+      - Handoff Tool: tools/handoff_tool.md
+      - OpenAI Request: tools/openai_request.md
+      - Provider Contract Tool: tools/provider_contract_tool.md
+      - Provider Query Tool: tools/provider_query_tool.md
+      - Provider Subscribe Tool Async: tools/provider_subscribe_tool_async.md
+      - Query Knowledge Tool: tools/query_knowledge_tool.md
+      - Redis Client: tools/redis_client.md
+      - Return Answer Tool: tools/return_answer_tool.md
+      - Save Knowledge Tool: tools/save-knowledge-tool.md
   - Services:
       - Overview: services/index.md
       - AI Registry:
@@ -107,23 +103,3 @@ nav:
       - Relay Service:
           - Overview: services/relay-service/overview.md
           - Relay: services/relay-service/relay.md
-
-# Плагины для дополнительной функциональности
-plugins:
-  - search
-
-# Markdown расширения
-markdown_extensions:
-  - admonition
-  - pymdownx.details
-  - pymdownx.superfences
-  - pymdownx.tabbed:
-      alternate_style: true
-  - pymdownx.highlight:
-      anchor_linenums: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - attr_list
-  - md_in_html
-  - toc:
-      permalink: true
