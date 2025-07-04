@@ -1,0 +1,24 @@
+site_name: Test Project Documentation
+repo_url: https://github.com/k1llzz/test.git
+theme:
+  name: material
+  palette:
+    scheme: default
+  features:
+    - navigation.tabs
+    - navigation.sections
+docs_dir: .
+nav:
+  - Welcome: README.md
+  - Summary: SUMMARY.md
+  - Getting Started:
+    - 'getting-started/index.md':
+      - Agent: getting-started/agent/index.md
+      - Provider: getting-started/provider/index.md
+      - Tool: getting-started/tool/index.md
+  - Core concepts:
+    - 'core-concepts/index.md':
+      - Diagrams: core-concepts/images/diagrams/index.md
+  - Agents: agents/index.md
+  - Services: services/index.md
+  - Tools: tools/index.md
