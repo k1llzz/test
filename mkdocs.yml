@@ -11,11 +11,11 @@ docs_dir: docs
 nav:
   - Home: index.md
   - Getting Started:
-      - Overview: getting-started/quickstart.md
-      - Agent: getting-started/agent/quickstart.md
-      - Provider: getting-started/provider/quickstart.md
-      - Tool: getting-started/tool/quickstart.md
-  - Core concepts:
+      - Overview: getting-started/index.md
+      - Agent: getting-started/agent/index.md
+      - Provider: getting-started/provider/index.md
+      - Tool: getting-started/tool/index.md
+  - Core Concepts:
       - Overview: core-concepts/index.md
       - Diagrams: core-concepts/images/diagrams/index.md
   - Agents:
@@ -30,3 +30,4 @@ nav:
       - S3: services/s3.md
       - PostgreSQL: services/postgresql.md
       - LightRAG: services/lightrag.md
+
