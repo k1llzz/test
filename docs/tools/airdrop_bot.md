@@ -85,9 +85,9 @@ scraper = AsyncWebScraper(
 - Comprehensive logging
 
 ### C4 Context
-See [`airdrop_bot.puml`](./images/diagrams/airdrop_bot/airdrop_bot.puml) for a high-level sequence:
+See [`airdrop_bot.puml`](images/diagrams/airdrop_bot/airdrop_bot.puml) for a high-level sequence:
 
-![airdrop_bot.png](./images/diagrams/airdrop_bot/airdrop_bot.png)
+![airdrop_bot.png](images/diagrams/airdrop_bot/airdrop_bot.png)
 
 ### Crypto Symbols Processed
 ```

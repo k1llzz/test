@@ -61,9 +61,9 @@ export SAVE_KNOWLEDGE_TOOL_API_URL="http://custom-endpoint/insert"
 ## Architecture
 
 ### C4 Context
-See [`save_knowledge_tool.puml`](./images/diagrams/save_knowledge_tool/save_knowledge_tool.puml) for a high-level sequence:
+See [`save_knowledge_tool.puml`](images/diagrams/save_knowledge_tool/save_knowledge_tool.puml) for a high-level sequence:
 
-![save_knowledge_tool.png](./images/diagrams/save_knowledge_tool/save_knowledge_tool.png)
+![save_knowledge_tool.png](images/diagrams/save_knowledge_tool/save_knowledge_tool.png)
 
 ### Data Models
 ```python

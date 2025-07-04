@@ -85,9 +85,9 @@ Uniswap (1.005) <-> Binance (0.995) ETH/USDT 1.02%‼️
 | DEX  | Uniswap (Ethereum) |
 
 ### C4 Context
-See [`arbitrage_bot.puml`](./images/diagrams/arbitrage_bot/arbitrage_bot.puml) for a high-level sequence:
+See [`arbitrage_bot.puml`](images/diagrams/arbitrage_bot/arbitrage_bot.puml) for a high-level sequence:
 
-![arbitrage_bot.png](./images/diagrams/arbitrage_bot/arbitrage_bot.png)
+![arbitrage_bot.png](images/diagrams/arbitrage_bot/arbitrage_bot.png)
 
 
 ## Database Integration
