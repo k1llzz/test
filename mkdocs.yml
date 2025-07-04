@@ -9,9 +9,20 @@ theme:
     - navigation.sections
     - navigation.expand
     - toc.integrate
+  icon:
+    repo: fontawesome/brands/github
 docs_dir: docs
+
+# Настройки для строгой проверки
+strict: false
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+
 nav:
   - Home: README.md
+  - Summary: SUMMARY.md
   - Getting Started:
       - Overview: getting-started/index.md
       - Quickstart: getting-started/quickstart.md
@@ -23,7 +34,6 @@ nav:
       - Provider:
           - Overview: getting-started/provider/index.md
           - Quickstart: getting-started/provider/quickstart.md
-          - README: getting-started/provider/README.md
       - Tool:
           - Overview: getting-started/tool/index.md
           - Quickstart: getting-started/tool/quickstart.md
@@ -97,3 +107,25 @@ nav:
       - Relay Service:
           - Overview: services/relay-service/overview.md
           - Relay: services/relay-service/relay.md
+
+# Плагины для дополнительной функциональности
+plugins:
+  - search
+  - minify:
+      minify_html: true
+
+# Markdown расширения
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
